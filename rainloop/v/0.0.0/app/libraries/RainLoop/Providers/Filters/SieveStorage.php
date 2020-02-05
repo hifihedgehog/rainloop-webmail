@@ -364,7 +364,7 @@ class SieveStorage implements \RainLoop\Providers\Filters\FiltersInterface
 				{
 					$aCapa['vacation'] = true;
 
-					$iDays = 1;
+					$iDays = 0;
 					$sSubject = '';
 					if (0 < \strlen($sValueSecond))
 					{
@@ -372,7 +372,7 @@ class SieveStorage implements \RainLoop\Providers\Filters\FiltersInterface
 							$this->quote(\MailSo\Base\Utils::StripSpaces($sValueSecond)).'" ';
 					}
 
-					if (0 < \strlen($sValueThird) && \is_numeric($sValueThird) && 1 < (int) $sValueThird)
+					if (0 < \strlen($sValueThird) && \is_numeric($sValueThird) && 0 < (int) $sValueThird)
 					{
 						$iDays = (int) $sValueThird;
 					}
